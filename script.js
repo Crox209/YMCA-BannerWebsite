@@ -29,7 +29,7 @@ const bannerOptions = [
   }
 ];
 
-// Sort by price (least to most expensive)
+
 bannerOptions.sort((a, b) => a.price - b.price);
 
 const container = document.getElementById("options");
