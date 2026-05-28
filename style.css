@@ -156,13 +156,13 @@ header {
   font-size: 1.05rem;
 }
 
-/* Specific colors for different tiers */
+
 .card:nth-child(1) { border-left-color: #4ecdc4; }
 .card:nth-child(2) { border-left-color: #44a3aa; }
 .card:nth-child(3) { border-left-color: #e8a020; }
 .card:nth-child(4) { border-left-color: #1a3c6e; }
 
-/* Contact Section */
+
 .contact {
   text-align: center;
   padding: 40px 20px;
