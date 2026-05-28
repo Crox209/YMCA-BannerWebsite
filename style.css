@@ -1,85 +1,353 @@
-* { box-sizing: border-box; margin: 0; padding: 0; }
+* { 
+  box-sizing: border-box; 
+  margin: 0; 
+  padding: 0; 
+}
 
 body {
-  font-family: Arial, sans-serif;
-  background: #f4f4f4;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
   color: #222;
+  line-height: 1.6;
 }
 
+/* Header Styles */
 header {
-  background: #1a3c6e;
+  background: linear-gradient(135deg, #1a3c6e 0%, #2a5298 100%);
   color: white;
-  text-align: center;
-  padding: 40px 20px;
+  padding: 30px 40px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
 
-header h1 { font-size: 2.2rem; }
-header p  { margin-top: 8px; font-size: 1.1rem; opacity: 0.85; }
-
-.banner-options {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 24px;
-  padding: 40px 20px;
-  max-width: 1100px;
+.header-content {
+  max-width: 1400px;
   margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.ymca-logo {
+  height: 80px;
+  width: auto;
+  filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.2));
+}
+
+.header-text h1 {
+  font-size: 2.5rem;
+  margin-bottom: 5px;
+  font-weight: 700;
+}
+
+.subtitle {
+  font-size: 1.4rem;
+  color: #4ecdc4;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.tagline {
+  font-size: 1.1rem;
+  opacity: 0.9;
+  font-style: italic;
+}
+
+/* Main Container - Two Column Layout */
+.main-container {
+  max-width: 1400px;
+  margin: 40px auto;
+  padding: 0 20px;
+  display: grid;
+  grid-template-columns: 1fr 450px;
+  gap: 40px;
+  align-items: start;
+}
+
+/* Pricing Section */
+.pricing-section {
+  background: white;
+  border-radius: 16px;
+  padding: 40px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 40px;
+  padding-bottom: 20px;
+  border-bottom: 3px solid #1a3c6e;
+}
+
+.section-header h2 {
+  font-size: 2rem;
+  color: #1a3c6e;
+  margin-bottom: 10px;
+}
+
+.section-header p {
+  color: #666;
+  font-size: 1.1rem;
+}
+
+/* Stacked Banner Options */
+.banner-options {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
 }
 
 .card {
-  background: white;
-  border-radius: 10px;
-  padding: 28px 24px;
-  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+  background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+  border-radius: 12px;
+  padding: 32px 28px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
   position: relative;
+  border-left: 6px solid #1a3c6e;
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: translateX(8px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.12);
 }
 
 .badge {
-  background: #e8a020;
+  background: linear-gradient(135deg, #e8a020 0%, #f4b942 100%);
   color: white;
-  font-size: 0.75rem;
+  font-size: 0.8rem;
   font-weight: bold;
-  padding: 4px 10px;
+  padding: 6px 14px;
   border-radius: 20px;
   position: absolute;
   top: -12px;
-  left: 20px;
+  right: 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
-.card h2 { font-size: 1.2rem; margin-bottom: 10px; color: #1a3c6e; }
+.card h3 { 
+  font-size: 1.4rem; 
+  margin-bottom: 12px; 
+  color: #1a3c6e;
+  font-weight: 700;
+  padding-right: 100px;
+}
 
 .price {
-  font-size: 1.8rem;
+  font-size: 2.2rem;
   font-weight: bold;
-  color: #222;
-  margin-bottom: 12px;
+  color: #2a5298;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
 }
 
-.price span { font-size: 0.9rem; color: #888; font-weight: normal; }
+.price span { 
+  font-size: 1rem; 
+  color: #888; 
+  font-weight: normal; 
+}
 
-.card p { color: #555; line-height: 1.6; }
+.card p { 
+  color: #555; 
+  line-height: 1.7;
+  font-size: 1.05rem;
+}
 
+/* Specific colors for different tiers */
+.card:nth-child(1) { border-left-color: #4ecdc4; }
+.card:nth-child(2) { border-left-color: #44a3aa; }
+.card:nth-child(3) { border-left-color: #e8a020; }
+.card:nth-child(4) { border-left-color: #1a3c6e; }
+
+/* Contact Section */
 .contact {
   text-align: center;
   padding: 40px 20px;
+  margin-top: 40px;
+  background: linear-gradient(135deg, #1a3c6e 0%, #2a5298 100%);
+  border-radius: 12px;
+  color: white;
 }
 
-.contact h2 { font-size: 1.5rem; margin-bottom: 20px; }
+.contact h2 { 
+  font-size: 1.8rem; 
+  margin-bottom: 15px; 
+}
+
+.contact p {
+  margin-bottom: 25px;
+  font-size: 1.1rem;
+  opacity: 0.95;
+}
 
 .cta-btn {
-  background: #1a3c6e;
+  display: inline-block;
+  background: linear-gradient(135deg, #4ecdc4 0%, #44a3aa 100%);
   color: white;
-  padding: 14px 32px;
+  padding: 16px 40px;
   border: none;
   border-radius: 8px;
-  font-size: 1rem;
+  font-size: 1.1rem;
+  font-weight: 600;
   cursor: pointer;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  margin-bottom: 20px;
 }
 
-.cta-btn:hover { background: #2a5298; }
+.cta-btn:hover { 
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.3);
+}
 
+.contact-info {
+  font-size: 0.95rem;
+  opacity: 0.9;
+}
+
+.contact-info a {
+  color: #4ecdc4;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
+}
+
+/* Map Section */
+.map-section {
+  position: sticky;
+  top: 20px;
+}
+
+.map-container {
+  background: white;
+  border-radius: 16px;
+  padding: 30px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+}
+
+.map-container h3 {
+  text-align: center;
+  font-size: 1.6rem;
+  color: #1a3c6e;
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 2px solid #e0e0e0;
+}
+
+.park-map {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 25px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.map-legend {
+  background: #f8f9fa;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.map-legend h4 {
+  color: #1a3c6e;
+  margin-bottom: 15px;
+  font-size: 1.1rem;
+}
+
+.map-legend ul {
+  list-style: none;
+}
+
+.map-legend li {
+  padding: 8px 0;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.legend-dot {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.legend-dot.single { background: #4ecdc4; }
+.legend-dot.traffic { background: #44a3aa; }
+.legend-dot.premium { background: #e8a020; }
+.legend-dot.pod { background: #1a3c6e; }
+
+/* Footer */
 footer {
   text-align: center;
-  padding: 20px;
-  color: #999;
-  font-size: 0.85rem;
+  padding: 30px;
+  background: #1a3c6e;
+  color: white;
+  margin-top: 40px;
+}
+
+footer p {
+  margin: 5px 0;
+  opacity: 0.9;
+}
+
+/* Responsive Design */
+@media (max-width: 1100px) {
+  .main-container {
+    grid-template-columns: 1fr;
+  }
+  
+  .map-section {
+    position: static;
+    order: -1;
+  }
+  
+  .header-content {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .ymca-logo {
+    height: 60px;
+  }
+  
+  .header-text h1 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 600px) {
+  header {
+    padding: 20px;
+  }
+  
+  .header-text h1 {
+    font-size: 1.6rem;
+  }
+  
+  .subtitle {
+    font-size: 1.1rem;
+  }
+  
+  .pricing-section {
+    padding: 25px;
+  }
+  
+  .card h3 {
+    font-size: 1.2rem;
+    padding-right: 0;
+  }
+  
+  .price {
+    font-size: 1.8rem;
+  }
 }
