@@ -442,6 +442,12 @@ footer p {
     font-size: 1.2rem;
     padding-right: 0;
   }
+
+  .badge {
+    position: static;
+    display: inline-flex;
+    margin: 0 0 12px 50px;
+  }
   
   .price {
     font-size: 1.8rem;
