@@ -362,21 +362,74 @@ footer p {
   header {
     padding: 20px;
   }
+
+  .main-container {
+    margin: 24px auto;
+    padding: 0 14px;
+    gap: 22px;
+  }
   
   .header-text h1 {
     font-size: 1.5rem;
   }
   
   .packages-section {
-    padding: 25px;
-  }
-
-  .map-container {
     padding: 22px;
   }
 
+  .section-header {
+    margin-bottom: 26px;
+  }
+
+  .section-header h2 {
+    font-size: 1.7rem;
+  }
+
+  .section-header p {
+    font-size: 1rem;
+  }
+
+  .banner-options {
+    gap: 18px;
+  }
+
+  .card {
+    padding: 28px 20px;
+  }
+
+  .card:hover {
+    transform: none;
+  }
+
+  .map-container {
+    padding: 18px;
+  }
+
+  .map-container h3 {
+    font-size: 1.3rem;
+    margin-bottom: 16px;
+  }
+
   .park-map {
-    height: 380px;
+    height: auto;
+    max-height: none;
+    object-fit: contain;
+  }
+
+  .right-sidebar {
+    gap: 20px;
+  }
+
+  .contact {
+    padding: 26px 20px;
+  }
+
+  .contact h2 {
+    font-size: 1.45rem;
+  }
+
+  .contact p {
+    font-size: 1rem;
   }
   
   .card h3,
@@ -397,6 +450,13 @@ footer p {
   .zone-letter {
     width: 35px;
     height: 35px;
+    font-size: 1rem;
+  }
+
+  .cta-btn {
+    width: 100%;
+    max-width: 100%;
+    padding: 14px 18px;
     font-size: 1rem;
   }
 }
