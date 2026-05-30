@@ -325,9 +325,15 @@ header {
 
 /* Desktop-only enhancement for blue contact panel */
 @media (min-width: 1101px) {
+  .right-sidebar {
+    grid-template-rows: auto 1fr;
+    height: 100%;
+  }
+
   .contact {
-    padding: 48px 38px;
-    min-height: 330px;
+    padding: 52px 40px;
+    min-height: 0;
+    height: 100%;
   }
 
   .contact h2 {
