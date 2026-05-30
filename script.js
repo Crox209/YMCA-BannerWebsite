@@ -28,10 +28,15 @@ const bannerOptions = [
   },
   {
     zone: "B",
-    title: "Full Pod Package",
+    title: "Field Group Package",
     price: 3200,
     displayPrice: "$3,200",
-    description: "A banner in every field within a pod. Includes a 20% discount — effectively $800 per banner.",
+    description: "4 banners across an entire field group.",
+    details: [
+      "(20% Savings - $800 per banner)",
+      "Field Group 1: Fields 1-4",
+      "Field Group 2: Fields 5-8"
+    ],
     badge: "Best Value",
     zoneClass: "zone-b"
   }
@@ -49,6 +54,7 @@ bannerOptions.forEach(option => {
     <h3>${option.title}</h3>
     <p class="price">${option.displayPrice} <span>/ year</span></p>
     <p>${option.description}</p>
+    ${option.details ? `<ul class="package-details">${option.details.map(detail => `<li>${detail}</li>`).join("")}</ul>` : ""}
   `;
 
   container.appendChild(card);
